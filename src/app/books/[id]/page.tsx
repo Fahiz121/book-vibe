@@ -10,7 +10,7 @@ interface IBookDetailsPageProps {
 }
 
 const getBooks = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/booksData.json`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_BASE_URL || "https://book-vibe-site.vercel.app"}/booksData.json`);
   const books = await res.json();
   return books;
 };
