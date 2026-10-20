@@ -16,7 +16,7 @@ const getBooks = async () => {
   const books = await res.json();
   return books;
 };
-export const instant = false;
+
 const BookDetailsPage = async ({ params }: IBookDetailsPageProps) => {
   const { id } = await params;
   const booksData = await getBooks();
